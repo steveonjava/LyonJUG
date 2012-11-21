@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" fx:id="mainWindow" prefHeight="200.00009999999747" prefWidth="548.0" xmlns:fx="http://javafx.com/fxml" fx:controller="lyonjug.SampleLargeController">
+  <children>
+    <ImageView fx:id="logo" fitHeight="34.517478942871094" fitWidth="83.66101190941231" layoutX="61.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@logo.gif" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <Text layoutX="297.0" layoutY="120.0" scaleX="6.665824972491007" scaleY="2.8624028667732384" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome" />
+  </children>
+</AnchorPane>
