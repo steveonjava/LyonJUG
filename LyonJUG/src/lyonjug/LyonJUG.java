@@ -4,6 +4,7 @@
  */
 package lyonjug;
 
+import java.io.IOException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -16,13 +17,13 @@ import javafx.stage.Stage;
  */
 public class LyonJUG extends Application {
     
+    private Stage primaryStage;
+
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("Sample.fxml"));
-        
-        Scene scene = new Scene(root);
-        
-        stage.setScene(scene);
+        this.primaryStage = stage;
+        SampleController controller = (SampleController) changeScene("Sample.fxml");
+        controller.setMain(this);
         stage.show();
     }
 
@@ -36,5 +37,16 @@ public class LyonJUG extends Application {
      */
     public static void main(String[] args) {
         launch(args);
+    }
+
+    public Object changeScene(String fxmlUrl) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlUrl));
+        Parent root = (Parent) loader.load();
+
+        Scene scene = new Scene(root);
+
+        primaryStage.setScene(scene);
+
+        return loader.getController();
     }
 }
