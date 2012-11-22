@@ -7,7 +7,7 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="200.0" prefWidth="320.0" xmlns:fx="http://javafx.com/fxml" fx:controller="lyonjug.SampleController">
+<AnchorPane id="AnchorPane" fx:id="mainPane" prefHeight="200.0" prefWidth="320.0" xmlns:fx="http://javafx.com/fxml" fx:controller="lyonjug.SampleController">
     <children>
         <Label fx:id="label" layoutX="126.0" layoutY="120.0" minHeight="16.0" minWidth="69.0" />
         <Group fx:id="group">
@@ -21,5 +21,6 @@
             </children>
         </Group>
         <Button fx:id="button" layoutX="126.0" layoutY="121.0" onAction="#handleButtonAction" text="Spin Me!" />
+        <Button fx:id="clickme" layoutX="126.0" layoutY="154.0" onAction="#handleClickmeAction" text="Click me" />
     </children>
 </AnchorPane>
